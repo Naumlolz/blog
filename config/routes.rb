@@ -12,4 +12,8 @@ Rails.application.routes.draw do
   get '/users/dashboard', to: 'users#dashboard'
 
   get '/users/profile', to: 'users#profile'
+  post '/users/update_profile', to: 'users#update_profile'
+
+  get '/users/change_password', to: 'users#change_password'
+  post '/users/update_password', to: 'users#update_password'
 end
