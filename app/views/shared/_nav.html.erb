@@ -12,6 +12,12 @@
     </ul>
     <ul class="navbar-nav">
       <% if user_logged_in? %>
+      <li class="nav-item">
+        <%= link_to 'Create a post', new_post_path, class: 'nav-link' %>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'My posts', posts_path, class: 'nav-link' %>
+      </li>
       <li class="nav-item mt-2 me-3">
         <span class="navbar-text">
           Hello, <%= link_to current_user.first_name, users_profile_path %>

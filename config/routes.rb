@@ -16,4 +16,6 @@ Rails.application.routes.draw do
 
   get '/users/change_password', to: 'users#change_password'
   post '/users/update_password', to: 'users#update_password'
+
+  resources :posts, except: [:edit, :update]
 end

@@ -1,0 +1,15 @@
+<h1>index page</h1>
+<div class="row">
+  <% @posts.each do |post|%>
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title"><%= post.title %></h5>
+      <p class="card-text"><%= post.body %></p>
+      <%= link_to 'Read More', post_path(id: post.id),
+                method: :get, class: 'btn-5' %>
+      <%= button_to 'Delete post', post_path(id: post.id),
+                method: :delete, class: 'btn-5' %>
+    </div>
+  </div>
+  <% end %>
+</div>
