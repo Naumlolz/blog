@@ -18,4 +18,5 @@ Rails.application.routes.draw do
   post '/users/update_password', to: 'users#update_password'
 
   resources :posts, except: [:edit, :update]
+  resources :comments, only: [:create, :destroy]
 end

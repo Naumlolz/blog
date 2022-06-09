@@ -8,3 +8,16 @@
     </div>
   </div>
 </div>
+
+<h3>Comments:</h3>
+<% @comments.each do |comment| %>
+  <div>
+    <strong><%= comment.user.first_name %> <%= comment.user.last_name %></strong>:
+    <br>
+    <p><%= comment.body %></p>
+    <p><%= button_to 'Delete', comment_path(id: comment.id, post_id: @post.id),
+            method: :delete, data: { confirm: 'Are you sure?' },
+            class: "btn btn-danger btn-sm" %></p>
+  </div>
+<% end %>
+<%= render partial: 'comments/form', locals: { comment: @comment } %>
