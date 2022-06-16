@@ -12,7 +12,7 @@ class UsersController < ApplicationController
       flash[:success] = 'Your profile was updated'
       redirect_to users_profile_path
     else
-      @errors = updated_user.erros.full_messages
+      @errors = updated_user.errors.full_messages
       render 'profile'
     end
   end
@@ -26,7 +26,7 @@ class UsersController < ApplicationController
   end
   
   def update_password
-    service = Users:UpdatePasswordService.new(
+    service = Users::UpdatePasswordService.new(
       current_user, params[:old_password], params[:new_password],
       params[:new_password_confirmation]
     )

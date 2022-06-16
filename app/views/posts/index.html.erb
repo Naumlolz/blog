@@ -1,14 +1,14 @@
-<h1>index page</h1>
+<h1>My posts</h1>
 <div class="row">
   <% @posts.each do |post|%>
-  <div class="card" style="width: 18rem;">
+  <div class="card me-3 mb-3 mt-3" style="width: 18rem;">
     <div class="card-body">
       <h5 class="card-title"><%= post.title %></h5>
-      <p class="card-text"><%= post.body %></p>
-      <%= link_to 'Read More', post_path(id: post.id),
-                method: :get, class: 'btn-5' %>
+      <p class="card-text text-truncate"><%= post.body %></p>
+      <%= button_to 'Read More', post_path(id: post.id),
+                method: :get, class: 'btn-success mt-2 ms-3', id: "read" %>
       <%= button_to 'Delete post', post_path(id: post.id),
-                method: :delete, class: 'btn-5' %>
+                method: :delete, class: 'btn-outline-danger mt-2 ms-3', id: "destroy" %>
     </div>
   </div>
   <% end %>

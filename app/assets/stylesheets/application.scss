@@ -1,1 +1,26 @@
 @import "bootstrap/scss/bootstrap";
+
+body {
+  background-color: #bcfffc;
+}
+
+.card {
+  background-color: #afc1cf;
+  height: 120px;
+
+  #destroy {
+    position: absolute;
+    margin-left: 0px;
+    left: 50%;
+    width: 100px;
+    bottom: 8px;
+  }
+
+  #read {
+    position: absolute;
+    margin-left: 40px;
+    left: 0;
+    width: 100px;
+    bottom: 8px;
+  }
+}

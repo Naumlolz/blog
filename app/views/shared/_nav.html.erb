@@ -10,12 +10,12 @@
         <%= link_to 'Home', root_path, class: 'nav-link' %>
       </li>
     </ul>
-    <ul class="navbar-nav">
+    <ul class="navbar-nav ms-auto">
       <% if user_logged_in? %>
-      <li class="nav-item">
+      <li class="nav-item me-4">
         <%= link_to 'Create a post', new_post_path, class: 'nav-link' %>
       </li>
-      <li class="nav-item">
+      <li class="nav-item me-4">
         <%= link_to 'My posts', posts_path, class: 'nav-link' %>
       </li>
       <li class="nav-item mt-2 me-3">
@@ -23,7 +23,7 @@
           Hello, <%= link_to current_user.first_name, users_profile_path %>
         </span>
       </li>
-      <li class="nav-item">
+      <li class="nav-item me-5">
         <%= link_to 'Change password', users_change_password_path, class: 'nav-link' %>
       </li>
       <li class="nav-item me-5">
@@ -33,7 +33,7 @@
       <li class="nav-item">
         <%= link_to 'Log In', users_sign_in_path, class: 'nav-link'%>
       </li>
-      <li class="nav-item">
+      <li class="nav-item ms-4 me-4">
         <%= link_to 'Sign up', users_sign_up_path, class: 'btn btn-success'%>
       </li>
       <% end %>
